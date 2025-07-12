@@ -1,8 +1,8 @@
 <div class="bg-dark-900 text-light-100 font-bold h-screen py-6 flex flex-col gap-8 items-center">
   <h1 class="text-3xl text-center">Hello Zelda</h1>
   <form #form="ngForm" class="w-[60%]">
-    <input pInputText pSize="large" type="text" name="userInput" class="w-full" [(ngModel)]="userInput"
-      (keydown.enter)="onEnter()" />
+    <input pInputText pSize="large" autocomplete="off" type="text" name="userInput" class="w-full"
+      [(ngModel)]="userInput" (keydown.enter)="onEnter()" />
   </form>
   @if(userInput) {
   <div class="w-[60%] overflow-hidden">
