@@ -36,6 +36,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/early-learner/",
               "budgets": [
                 {
                   "type": "initial",
@@ -91,6 +92,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
