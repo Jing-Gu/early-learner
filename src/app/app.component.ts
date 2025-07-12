@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { JsonPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [JsonPipe, FormsModule, InputTextModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })
 export class AppComponent {
-  title = 'early-learner';
+  public userInput: string = '';
+
+  onEnter() {
+    this.userInput = "";
+  }
 }
